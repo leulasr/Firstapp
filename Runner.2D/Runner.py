@@ -54,18 +54,18 @@ player_character2 = pygame.image.load('RunnerPics\Graphics\Characters\Characters
 player_character2 = pygame.transform.rotozoom(player_character2,0,2)
 player2_rectangle = player_character2.get_rect(center = (410,210))
 
-game_name = font.render('RUNNER 2D BY GROUP 3',False,'White')
+game_name = font.render('RUNNER 2D BY GROUP 3',False,'Black')
 game_name_rectangle = game_name.get_rect(center = (410,80))
 
-game_message = font2.render('PRESS SPACE TO RUN',False,'Black')
+game_message = font2.render('PRESS SPACE TO RUN',False,'White')
 game_message_rectangle = game_message.get_rect(center = (410,400))
 
 #TIMER
 obstacle_timer = pygame.USEREVENT + 1
-pygame.time.set_timer(obstacle_timer,1500)
+pygame.time.set_timer(obstacle_timer,1600)
 
-
-while  True:
+play = True
+while  play:
     for event in pygame.event.get(): #-checking for players input
         if event.type == pygame.QUIT: #-if input is quit , then quit the game window
            pygame.quit()
